@@ -2,7 +2,7 @@
   "manifest_version": 2,
  
   "name": "* YouTube * - (De)monetized Videos",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "NamFlow - \n YouTube: https://www.youtube.com/channel/UC5juVudK51sv04jbM1xjyaw \n Github: https://github.com/blackCheetah",
   "description": "Show if the video got demonetized or not by attaching (de)monetized symbol next to the title of the youtube video. Created by @NamFlow",
  
@@ -13,6 +13,7 @@
   "content_scripts": [{
     "run_at" : "document_end",
     "js": ["content.js"],
+    "css": ["styles.css"],
     "matches": ["https://www.youtube.com/watch?v=*"]
   }],
 

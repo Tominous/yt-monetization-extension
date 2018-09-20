@@ -5,7 +5,7 @@
     @author: blackCheetah / NamFlow
     @github: https://github.com/blackCheetah
     @youtube: https://www.youtube.com/channel/UC5juVudK51sv04jbM1xjyaw
-    @version: 0.1.0
+    @version: 0.2.0
 */
 
 window.onload = function() {
@@ -13,9 +13,10 @@ window.onload = function() {
 }
 
 function check_adsense() {
-    const word = 'adsense_video_doc_id'
+    const ad_string = 'adsense'
+    const ad_string_2 = 'pagead2'
     var body_HTML = document.body.innerHTML
-    var searchPattern = new RegExp('(\\w*' + word + '\\w*)', 'gi')
+    var searchPattern = new RegExp('(\\w*' + ad_string + '\\w*)|(\\w*' + ad_string_2 + '\\w*)', 'gi')
     var matches = body_HTML.match(searchPattern)
 
     if (matches === null ) {
@@ -27,6 +28,7 @@ function check_adsense() {
 
 function add_symbol(image) {
     var symbol = document.createElement("img")
+    symbol.id = 'monetization_symbol'
     //var eow_title = document.getElementById('eow-title')
     var watch_title_container = document.querySelector('#watch-headline-title > h1')
     //var old_title = eow_title.textContent
