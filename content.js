@@ -29,9 +29,9 @@ function check_adsense() {
 function add_symbol(image) {
     var symbol = document.createElement("img")
     symbol.id = 'monetization_symbol'
-    //var eow_title = document.getElementById('eow-title')
+    var eow_title = document.getElementById('eow-title')
     var watch_title_container = document.querySelector('#watch-headline-title > h1')
-    //var old_title = eow_title.textContent
+    var old_title = eow_title.textContent
 
     if (image == 'monetized') {
         symbol.src = chrome.extension.getURL('icons/monetized.png')
